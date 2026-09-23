@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+*.blend1
+.env
+.env.*
+.sites-runtime/
+.openai/
+*.log
+tools/
+.qa/
