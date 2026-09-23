@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {GelContact,contactKernel,applyGel} from '../assets/web/physics.js';
+function held(hz=60,target=[0,0,-.9],seconds=1){const c=new GelContact([0,2,1],[0,0,1],1.3);c.setTarget(target);for(let i=0;i<hz*seconds;i++)c.step(1/hz);return c;}
+test('deep press deforms only a local patch and bulges its rim',()=>{const c=held(),rest=new Float32Array([0,2,1,.6,2,1,0,.1,0,0,2,-1]),out=new Float32Array(rest.length);applyGel(rest,out,[contactKernel(rest,c)]);assert.ok(out[2]<.15);assert.ok(out[3]>.6);assert.deepEqual([...out.slice(6)],[...rest.slice(6)]);});
+test('pull follows cursor in three dimensions',()=>{const c=held(60,[1.3,.25,.7]),rest=new Float32Array([0,2,1]),out=new Float32Array(3);applyGel(rest,out,[contactKernel(rest,c)]);assert.ok(out[0]>1.2&&out[1]>2.2&&out[2]>1.65);});
+test('release overshoots then returns fully without permanent distortion',()=>{const c=held();c.release();let max=-Infinity;for(let i=0;i<900;i++){c.step(1/60);max=Math.max(max,c.displacement[2]);}assert.ok(max>.15);assert.equal(c.energy,0);assert.deepEqual(c.displacement,[0,0,0]);});
+test('30/60/120 Hz produce the same held and released shape',()=>{const vals=[30,60,120].map(hz=>{const c=held(hz);c.release();for(let i=0;i<hz;i++)c.step(1/hz);return c.displacement[2];});assert.ok(Math.max(...vals)-Math.min(...vals)<1e-10);});
+test('long hold stores more slow memory',()=>assert.ok(Math.abs(held(60,[0,0,-1],2).memory[2])>Math.abs(held(60,[0,0,-1],.2).memory[2])*2));
+test('extreme pull is bounded and ground remains intact',()=>{const c=held(60,[0,-100,0]);assert.ok(Math.hypot(...c.target)<=2.25);const rest=new Float32Array([0,2,1]),out=new Float32Array(3);applyGel(rest,out,[contactKernel(rest,c)]);assert.ok(out.every(Number.isFinite)&&out[1]>=.015-1e-8);});
+test('overlapping grabs return to their shared original surface',()=>{const a=held(60,[1,0,0]),b=held(60,[-.4,.3,0]),rest=new Float32Array([0,2,1,4,2,1]),out=new Float32Array(6),ks=[contactKernel(rest,a),contactKernel(rest,b)];applyGel(rest,out,ks);assert.ok(out[0]>.5);assert.equal(out[3],4);a.release();b.release();for(let i=0;i<1000;i++){a.step(1/60);b.step(1/60);}applyGel(rest,out,ks);assert.deepEqual(out,rest);});

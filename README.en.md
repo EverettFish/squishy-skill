@@ -1,98 +1,109 @@
-# 🫧 Squishy · Make your favorite thing squishable
+# 🫠 Squishy · Make everything a little unhinged
 
-[中文](README.md)
+[简体中文](README.md)
 
-**A tiny, softer version of something you love.**
+**Turn anything into something sticky, stretchy, and deeply unserious.**
 
-Your cat's unimpressed face. A cake too cute to eat. That little creature you drew in the corner of your notebook. Give your AI assistant a picture and turn it into a plump digital squishy: press it down, let go, and watch it take its sweet time coming back.
+Upload a picture. Let your AI assistant give it a 3D body you can poke, knead and pull into questionable shapes. Push one spot in. Stretch a cheek out. Let go and watch it slowly negotiate its way back to normal.
 
-No modeling lessons first. Just a picture and a small excuse to take a break.
+Turn a willing friend's avatar into a rat-jerky squishy. Pull your profile picture into a noodle. Flatten the metaphorical cake your boss keeps promising. Dignity is optional. Another squish is inevitable.
 
-![A rounded Nailong turnaround, made before modeling](examples/nailong/turnaround.png)
+**[Try it on TATA →](https://everettfish.github.io/squishy-skill/tata/)** · **[Nailong isn't safe either →](https://everettfish.github.io/squishy-skill/)** · [Reference vs. model](https://everettfish.github.io/squishy-skill/tata/likeness.html)
 
-**[Give the demo a squeeze →](https://everettfish.github.io/squishy-skill/)** · [See the turnaround](examples/nailong/turnaround.png) · [Take home the Blender model](examples/nailong/toy.blend)
+![Press, stretch, release, recover a little dignity](examples/tata/squish.gif)
 
-![A Blender squeeze, soft jiggle, and slow rise](examples/nailong/squish.gif)
+## A few questionable uses
 
-## What would you squeeze today?
+### 🐀 Your friend, now available as rat jerky
 
-### 🐈 Your cat, with fewer consequences
+Use an image your friend is happy for you to play with:
 
-“Keep her grumpy face. Make the rest of her a little mochi.”
+> Make this character a ridiculous rat-jerky squishy. Keep the face recognizable, but let the body get weird. I want to grab a cheek, stretch it out and watch it wobble back.
 
-A small desk companion for long meetings. The digital cat recovers slowly; the real cat keeps sleeping.
+Being a person is exhausting. Try being a stretchy little goblin for a minute. “Rat jerky” is an art-direction joke, not a built-in rat filter: tell the assistant what kind of strange you're after.
 
-### 🍰 The dessert you wanted to keep forever
+### 🫓 Give your avatar a difficult afternoon
 
-A strawberry cake, a custard pudding, that slightly lopsided cookie you made yourself. Same charm, considerably fewer crumbs.
+Your profile picture handles professionalism. Its squishy double handles whatever this is. Round before the meeting, suspiciously bookmark-shaped afterward. Give it a moment to recover.
 
-### 🦖 A day off for your character
+### 🍮 Remove a dessert's structural dignity
 
-Turn an original character, game NPC, or avatar into a soft little friend. Usually they save the world. Today their only job is to get squashed and slowly stand back up.
+Pudding, cake, cream puffs, an innocent potato. It looks edible. It stretches like it absolutely shouldn't. Digital food: no crumbs, no calories, several unanswered questions.
 
-### 🎁 A small gift with no shipping address
+### 🦖 Let a character leave its normal state
 
-“Make this bear squishable. Put ‘Take your time. I'm here.’ beside it.”
+An original mascot, a tiny monster, an avatar. Still recognizable at rest. Increasingly debatable once you get your hands on it.
 
-Play on a phone or computer. When you're ready to send a link, ask your assistant to publish it. Your photos aren't made public by default.
+## Start the nonsense
 
-### ✏️ A second life for a doodle
-
-A child's drawing. A sticky-note monster. A potato with suspicious intentions. It doesn't have to be polished to have personality.
-
-## One picture. One small request.
-
-> Use $squishy to turn this picture into a slow-rising squishy. First make a cute, rounded 3D turnaround in a cozy life-sim game style, then build the model. Give it a plain white page where I can press, rotate, and let it slowly recover.
-
-Your assistant will:
-
-1. **Find what makes it yours.** Keep its colours, expression, markings, and those little details that matter.
-2. **Give it some volume.** Create consistent front, side, and back views before modeling. No paper-thin toy hiding behind a good camera angle.
-3. **Make a soft little body.** Build an editable 3D model with a finely textured foam surface.
-4. **Leave room for a breather.** Open a quiet white page. Hold, release, and watch it puff back up.
-
-People, animals, and characters get the mochi treatment by default: round heads, plump bellies, tiny limbs, and plenty of volume from the side. Let go for a little soft jiggle, followed by a slow rise. The Blender project includes a playable version of that same squishy motion.
-
-No oversized logo, busy dashboard, or decorative tech labels. Just your little thing, being soft.
-
-## Put it in your assistant's pocket
-
-Squishy is an open-source **Skill for AI assistants**, not another app to sign up for.
-
-**Codex:** clone this repository into `~/.codex/skills/squishy`, then start a new session.
+This is an open-source **Skill for AI assistants**, not another app to sign up for.
 
 ```sh
 git clone https://github.com/EverettFish/squishy-skill.git ~/.codex/skills/squishy
 ```
 
-**Claude Code or another skills-aware assistant:** use its skill directory, such as `~/.claude/skills/squishy`. In environments without a skill loader, ask the assistant to read `SKILL.md` and follow the workflow.
+For Codex, reopen your session after installing in `~/.codex/skills/squishy`. Other Skills-compatible assistants can use their own directory, such as `~/.claude/skills/squishy`. An assistant with code execution can also read `SKILL.md` directly.
 
-Then upload a picture and say: “Make this squishable.”
+Upload a picture and say:
 
-### You don't need to collect all the tools first
+> Use $squishy to make this sticky and ridiculously bouncy. Let me press locally and grab a spot to pull it outward. Keep the face and clothes recognizable; the deformation doesn't have to be dignified. White, minimal webpage. No physics lecture beside the toy.
 
-- **Image generation available?** The assistant uses the tools it actually has. In Codex / ChatGPT, that means the built-in imagegen tool when callable; elsewhere, the available image generator.
-- **No image generator?** It works from your original image instead of stopping to ask for a paid API key.
-- **No Blender?** It looks for an existing installation, then downloads and verifies an official portable copy into your user directory when needed.
+Ask explicitly for rat jerky, a mochi blob or another absurd redesign. **Without that request, identity still comes first. Weird physics is not permission to replace somebody's face.**
 
-Your computer must be able to run Blender, and your assistant needs permission to execute code and read/write files. Once built, the toy doesn't need image-generation credits or an online API to play.
+## What the assistant does
 
-## What comes home with you?
+1. **Identify the subject of the experiment.** Keep its face, colours, clothes and distinctive details.
+2. **Fill in the unseen bits.** Generate consistent reference views with an available image tool. Preserve already-finished 3D art; fall back to the original if generation is unavailable.
+3. **Give it a deformable body.** Build volume, UV/projected textures and materials in Blender. Find an existing install first; otherwise download and verify an official portable release within the environment's permissions.
+4. **Introduce it to your cursor.** A white page with Press, Pull, Rotate and optional feel controls. The parameters shouldn't get more attention than the thing being stretched.
 
-- A cute turnaround sheet, when image generation is available.
-- A genuinely three-dimensional squishy with a front, sides, and back.
-- An editable Blender file and its construction script.
-- A clean little webpage that works on phones and computers.
-- A small comforting line, if you'd like one.
+You get a Blender project, build scripts, GLB, actual renders and a playable webpage, plus a reference sheet when generation is available. Playing needs no online image API. Publishing your link or source material is your choice.
 
-The assistant interprets your picture and builds a toy from it. Intricate characters, transparent objects, and heavily obscured photos may take a few rounds. This is a playful digital squishy, not an exact 3D scan or a manufacturing-ready physical toy.
+## How the sticky part works
 
-## Bring more weird little things
+A little implementation detail for people who want to make the situation worse, productively:
 
-Cats, bread, mysterious creatures: contributions and examples are welcome. The aim is simple: **more recognisable, more rounded, more satisfying to squeeze—and less interface.**
+| Part | Implementation |
+|---|---|
+| Image reference | Uses real, callable image tools such as built-in imagegen, or falls back to the original. No invented image-to-3D service. |
+| Blender geometry | Subject-specific Python builds volume, UV/projection textures and materials. Finished 3D references retain their details instead of getting a stock doll face. |
+| Local pressing | Raycast a surface, map back to rest coordinates, then apply a compact smooth deformation kernel. Nearby material bulges; distant vertices don't scale. |
+| Pulling | Cursor motion on a grab plane plus an outward normal component. Eyes, lettering and clothing textures move with the same surface. |
+| Bounce and delay | A damped oscillator handles fast response and release wobble; a slowly decaying memory term reluctantly returns to rest. |
+| Surface appearance | Foam/gel Physical Material for ordinary models. Baked reference textures keep their original colours, with relative-normal shading to make dents readable. |
+| Browser | Static Three.js, local dependencies. No logo or technical dashboard. Press, Pull, Rotate. |
 
-If you'd like to tinker, start with [SKILL.md](SKILL.md), browse the [references](references), or adapt the [viewer template](assets/web). If you'd just like a toy, upload a picture.
+The Blender timeline also includes a local press/pull/release demonstration. The webpage calculates interaction live; the timeline is editable animation, not a Blender soft-body simulation cache.
 
-Code and skill instructions are [MIT licensed](LICENSE). Nailong belongs to its respective rights holders; the demonstration assets do not grant commercial rights to that character. Your uploaded images remain yours or their original owners'. See [asset notes](ASSETS.md).
+## Weird, yes. Precision simulation, no.
 
-May the only thing that needs to bounce back today be your squishy.
+This is a **reduced-order viscoelastic approximation**, not FEM, fluid dynamics, self-collision or strict volume conservation. Extreme pulls can fold or intersect surfaces. Sometimes the result is deeply odd. This README is no longer pretending every output is a pristine, adorable collectible.
+
+Image-to-model also needs subject-specific work; it isn't an automatic scan. TATA uses the original texture for front appearance, with inferred side/back volume and supporting reference textures. Side views can show projection stretching. One image cannot establish an identical appearance from every unseen angle.
+
+Say “preserve the face and proportions” when likeness matters, or explicitly ask for a ridiculous body redesign. Inspectable, editable and playable beats pretending the reconstruction is perfect.
+
+## Adjust the level of wrong
+
+```sh
+python scripts/ensure_blender.py --search-root /your/workspace
+python scripts/init_project.py /your/new-toy --name "A Friend's Temporary Form" --lang en
+# Put the model at /your/new-toy/web/assets/toy.glb
+python scripts/serve.py /your/new-toy/web --port 4173
+```
+
+`web/toy.json` controls name, model URL, language, accent and `material: "gel"` or `"foam"`. Use `referenceTexture: true` for baked reference imagery. Appearance and deformation are separate choices.
+
+- [Blender configuration](references/blender-configuration.md): discovery/install, axes, materials, renders, projected text, animation and export.
+- [Likeness and textures](references/likeness-and-textures.md): don't accidentally turn your friend into a stranger.
+- [Interaction parameters](references/interaction.md): support radius, damping, memory and limits.
+- [TATA example](examples/tata/NOTES.md) · [Web template](assets/web) · [Modeling helpers](scripts/blender_helpers.py).
+
+```sh
+node --test tests/physics.test.mjs tests/gel.test.mjs
+python -m unittest discover -s tests
+```
+
+Bring strange pictures, questionable results and useful fixes to Issues. Code and instructions are [MIT licensed](LICENSE); character, trademark and asset rights remain with their owners. See [asset notes](ASSETS.md).
+
+**Give it a pull. Dignity can come back later.**

@@ -1,20 +1,5 @@
-<!doctype html>
-<html lang="zh-CN"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><meta name="description" content="把喜欢的它，变成软乎乎的捏捏。"><title>小捏捏</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23f8d453'/%3E%3C/svg%3E"><link rel="stylesheet" href="./style.css">
-<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
-</head><body>
-<main class="stage" aria-label="捏捏互动空间"><div id="viewport" tabindex="0" role="application" aria-label="拖动玩具按压，旋转模式可查看四周，按住空格整体挤压"><div id="loading">软乎乎的它，马上就来…</div></div></main>
-<div class="toy-name"><h1 id="toyName">小捏捏</h1><p id="hint">捏一下，再松手。</p></div>
-<nav class="controls" aria-label="捏捏操作">
-<button id="squeezeButton" class="primary" disabled>捏一下</button>
-<button data-mode="rotate" aria-pressed="false" class="quiet">转一转</button>
-<details class="settings"><summary aria-label="调节手感">手感</summary><div class="settings-popover">
-<label for="recovery">慢回弹 <output id="recoveryValue">6.0 s</output></label><input type="range" id="recovery" min="2" max="12" step="0.5" value="6">
-<label for="softness">柔软度 <output id="softnessValue">软乎乎</output></label><input type="range" id="softness" min="0.3" max="1" step="0.05" value="0.75">
-<button id="demo" disabled>看它慢慢恢复</button><button id="viewReset" aria-label="恢复正面视角">回到正面</button>
-</div></details>
-</nav>
-<div class="gentle-copy"><p>一点软，一点慢。</p><p>留几秒钟，什么都不用做。</p><span id="state" role="status">慢慢来，也没关系</span></div>
-<script type="module" src="./app.js"></script></body></html>
-
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff"><title>小捏捏捏捏</title><meta name="description" content="圆滚滚的小捏捏，可以按下去，也可以往外拉。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%235385d9'/%3E%3C/svg%3E"><link rel="stylesheet" href="./style.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head><body>
+<main class="stage" aria-label="捏捏互动空间"><div id="viewport" tabindex="0" role="application" aria-label="按住局部下压，拉扯模式向外拖动，空格键按压脸颊"><div id="loading">软乎乎的它，马上就来…</div></div></main>
+<div class="toy-name"><h1 id="toyName">小捏捏</h1><p id="hint">按住一点，拖动揉捏。</p></div>
+<nav class="controls" aria-label="捏捏操作"><button data-mode="press" class="selected" aria-pressed="true" disabled>按压</button><button data-mode="pull" aria-pressed="false" disabled>拉扯</button><button data-mode="rotate" aria-pressed="false" disabled>转一转</button><details class="settings"><summary aria-label="调节手感">手感</summary><div class="settings-popover"><label for="recovery">慢回弹 <output id="recoveryValue">5.0 s</output></label><input type="range" id="recovery" min="2" max="12" step="0.5" value="5"><label for="softness">黏弹程度 <output id="softnessValue">果冻感</output></label><input type="range" id="softness" min="0.6" max="1.4" step="0.05" value="1"><button id="demo" disabled>试着拉一下</button><button id="viewReset">回到正面</button></div></details></nav>
+<div class="gentle-copy"><p>一点软，一点慢。</p><p>留几秒钟，什么都不用做。</p><span id="state" role="status">慢慢来，也没关系</span></div><script type="module" src="./app.js"></script></body></html>

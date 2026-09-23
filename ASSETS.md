@@ -1,16 +1,9 @@
 # Asset notes / 素材说明
 
-The MIT license covers the code, skill instructions and written documentation.
-Three.js is MIT licensed; its license accompanies the vendored demo runtime.
+MIT covers code, skill instructions and written documentation. Three.js is MIT licensed; its license accompanies the local runtime.
 
-The Nailong example is a user-requested character modeling demonstration. Its
-turnaround was generated with the available built-in image tool from the user's
-reference; its model was authored in Blender. Nailong's character identity and
-related intellectual property belong to their respective rights holders and
-are not relicensed by this repository. The original uploaded reference photo
-is not distributed here. Generated references are modeling guidance, not proof
-of ownership or a scan of a physical object.
+Nailong and TATA are user-requested character modeling demonstrations. Character identities, clothing marks and related intellectual property remain with their respective rights holders; this repository does not grant commercial rights to them.
 
-MIT 许可适用于代码、技能说明与文档。Three.js 的 MIT 许可随示例运行文件保留。
-奶龙三视图与模型仅作流程演示，角色相关权利归原权利人所有，不随代码重新授权。
-仓库不包含用户最初上传的参考图片。使用其他图片制作或分享捏捏时，保留其原有权利归属。
+The Nailong turnaround is generated guidance. TATA uses the supplied 3D character image as an appearance texture and a generated turnaround for inferred hidden views. Source-derived textures are included in the TATA model, Blender file and comparison example to reproduce the requested likeness. Generated views are creative interpretations, not scans or evidence of ownership.
+
+MIT 适用于代码、技能说明与文档。示例角色及 TATALAB 等标识的权利归原权利人所有，不随代码重新授权。塔塔示例为了复现相似度，包含原图外观贴图、模型中打包的贴图以及对照页；侧背参考为生成补充，并非精密扫描。不要据此默认公开其他用户的私人照片。

@@ -19,9 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Assemble both playgrounds
+        run: |
+          mkdir -p _site/tata
+          cp -R examples/nailong/web/. _site/
+          cp -R examples/tata/web/. _site/tata/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: examples/nailong/web
+          path: _site
       - name: Publish the little squishy
         id: deployment
         uses: actions/deploy-pages@v4

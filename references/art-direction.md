@@ -2,7 +2,9 @@
 
 Inspect the source first. Record five things that make it *this* subject: silhouette, colour blocks, distinctive face/markings, body proportions, and key accessories. For a person or pet, retain distinguishing features while simplifying into a cute toy. For food or objects, preserve their own geometry rather than forcing character anatomy.
 
-For people, characters and animals, make the default proportions visibly mochi-like: short broad torso, big round cheeks/head, tiny limbs, and a side profile almost as plump as the front. As a starting point for a baby mascot, total height can be about 1.4–1.6 head heights and maximum width about .75–.85 of total height. Adjust to preserve identity; don't apply this anatomy to cakes or ordinary objects.
+For a finished 3D reference or an exact-match request, preserve its original face and proportions. Use the original front image as the authority and generate only consistent missing views. Read likeness-and-textures.md before modeling; do not use the restyling prompt below for this path.
+
+For explicitly restyled people, characters and animals, make the default proportions visibly mochi-like: short broad torso, big round cheeks/head, tiny limbs, and a side profile almost as plump as the front. As a starting point for a baby mascot, total height can be about 1.4–1.6 head heights and maximum width about .75–.85 of total height. Adjust to preserve identity; don't apply this anatomy to cakes or ordinary objects.
 
 ## Turnaround prompt
 
