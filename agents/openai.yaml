@@ -1,4 +1,4 @@
 interface:
-  display_name: "Squishy · 万物皆可捏"
-  short_description: "把喜欢的照片、角色和小点心，变成圆润可爱的慢回弹捏捏玩具。"
-  default_prompt: "用 $squishy 把这张图片做成可爱的 3D 慢回弹捏捏，先生成三视图，再建模，并给我一个纯白简洁的互动网页。"
+  display_name: "Squishy · 把万物捏到不太对劲"
+  short_description: "把图片变成黏糊糊、Q 弹、可以局部按压和往外拉扯的 3D 捏捏。"
+  default_prompt: "用 $squishy 把这张图片做成黏糊糊、特别 Q 弹的 3D 捏捏，保留辨识特征，能局部按压、往外拉扯和慢慢回弹，配一个纯白简洁的互动网页。"
